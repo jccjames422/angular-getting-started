@@ -1,0 +1,9 @@
+<section id="product-list" class="container">
+  <div *ngFor="let product of products" class="row">
+    <div class="col-12">
+      <h2><a href="#" class="link-primary">{{product.name}}</a></h2>
+      <p>{{product.description}}</p>
+      <button class="btn btn-primary">Share</button>
+    </div>
+  </div>
+</section>
