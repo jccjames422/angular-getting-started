@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product, products } from "../product";
+import { products } from "../product";
 
 @Component({
   selector: 'app-product-list',
@@ -7,8 +7,5 @@ import { Product, products } from "../product";
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products: Product[];
-  constructor() {
-    this.products = products;
-  }
+  products = products;
 }
