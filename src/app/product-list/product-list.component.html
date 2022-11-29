@@ -1,8 +1,17 @@
 <section id="product-list" class="container">
-  <div *ngFor="let product of products" class="row">
-    <div class="col-12">
-      <h2><a href="#" class="link-primary">{{product.name}}</a></h2>
-      <p>{{product.description}}</p>
+  <div *ngFor="let product of products" class="card my-4">
+    <div class="card-header">
+      <h5>
+        <a href="#"
+             class="link-primary"
+             [title]="product.name"
+             [routerLink]="['/products', product.id]">
+          {{product.name}}
+        </a>
+      </h5>
+    </div>
+    <div class="card-body">
+      <p *ngIf="product.description">{{product.description}}</p>
       <button class="btn btn-primary">Share</button>
     </div>
   </div>
