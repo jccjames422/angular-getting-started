@@ -1,5 +1,9 @@
 <h3>Cart</h3>
 
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
 <div class="d-flex justify-content-between w-50 my-2 p-2 bg-secondary bg-opacity-10" *ngFor="let item of items">
   <div>{{item.name}}</div>
   <div>{{item.price | currency}}</div>
